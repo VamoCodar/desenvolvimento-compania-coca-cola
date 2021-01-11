@@ -51,6 +51,10 @@ body {
     height: 6000px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .carousel {
     min-height: 450px;
 
@@ -83,6 +87,7 @@ body {
         padding-bottom: 20px;
         color: #fff;
         text-align: start;
+        z-index: 4;
 
         .caption__p {
             margin-top: 80px;
@@ -127,12 +132,37 @@ body {
 
     }
 
-    .carousel-item>img {
+    .carousel-item>img:not(.mapa) {
         position: absolute;
         top: 0;
         left: 0;
         min-height: 450px;
+        object-fit: cover;
 
+    }
+
+    .mapa {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        z-index: -1;
+
+        @include d(m) {
+            width: 120px;
+        }
+
+        @include d(s) {
+            width: 60px;
+
+        }
+    }
+
+    .carousel-control-next-icon {
+        background-image: url(../img/arrow-right.svg);
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url(../img/arrow-left.svg);
     }
 }
 
@@ -146,8 +176,24 @@ body {
 
 #intro__info {
     background-color: $preto-bg;
-    height: 340px;
+    height: 350px;
     padding: 30px 0;
+    position: relative;
+
+    .arrow__down {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 10px;
+        background-image: url(../img/arrow-down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: block;
+    }
 
     @include d(m) {
         height: 510px;
@@ -355,7 +401,10 @@ body {
 //seção que es
 
 .que__es {
-    margin-top: 80px;
+    padding-top: 80px;
+    background-image: url(../img/background-white.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include d(s) {
         margin-top: 50px;
@@ -417,7 +466,7 @@ body {
     margin-bottom: 50px;
 
     @include d(s) {
-        justify-content: center;
+        justify-content: space-around;
     }
 
     h5 {
@@ -461,6 +510,50 @@ body {
 .network {
     padding: 80px 0;
     background: $branco-cinza;
+    position: relative;
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+        background:#333333af;
+    }
+    
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+        estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+        background: $dourado;
+    }
+    &:after {
+        content: "";
+        background-image: url(../img/mapa.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 400px;
+        height: 200px;
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: -100px;
+        opacity: .6;
+
+        @include d(m) {
+            width: 150px;
+            right: -20px;
+
+        }
+
+        @include d(s) {
+            width: 100px;
+            right: 0px;
+            top: 150px;
+
+        }
+    }
 
     h2 {
         font-family: Open Sans;
@@ -473,6 +566,11 @@ body {
 
         span {
             color: $dourado;
+        }
+
+        @include d(s) {
+            font-size: 22px;
+
         }
     }
 
@@ -488,6 +586,11 @@ body {
         display: block;
         padding-bottom: 10px;
         margin-bottom: 30px;
+
+        @include d(m) {
+            margin-top: 30px;
+
+        }
     }
 
     h5 {
@@ -517,4 +620,36 @@ body {
             letter-spacing: 0.04em;
         }
     }
+}
+
+
+
+.network__linha-1,
+.network__linha-2 {
+   
+
+    @include d(m) {
+        max-height: 350px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        position: relative;
+        scrollbar-face-color: $dourado;
+
+        &:after {
+            content: " ↓ ";
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            color: rgba(0, 0, 0, 0.72);
+            height: 10px;
+            width: 10px;
+            animation: seta 1s ease-in infinite alternate;
+            display: inline-block;
+        }
+
+
+
+    }
+
 }
