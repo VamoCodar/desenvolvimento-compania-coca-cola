@@ -517,24 +517,25 @@ html {
         width: 5px;
         height: 5px;
     }
-    
+
     /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
     ::-webkit-scrollbar-track {
-        background:#333333af;
+        background: #333333af;
     }
-    
+
     /* aqui é a alça da barra, que demonstra a altura que você está na página
         estou colocando uma cor azul clara nela*/
     ::-webkit-scrollbar-thumb {
         background: $dourado;
     }
+
     &:after {
         content: "";
         background-image: url(../img/mapa.png);
         background-repeat: no-repeat;
         background-size: contain;
         width: 400px;
-        height: 200px;
+        height: 400px;
         display: block;
         position: absolute;
         top: 50px;
@@ -544,6 +545,7 @@ html {
         @include d(m) {
             width: 150px;
             right: -20px;
+            height: 200px;
 
         }
 
@@ -551,6 +553,7 @@ html {
             width: 100px;
             right: 0px;
             top: 150px;
+            height: 200px;
 
         }
     }
@@ -626,7 +629,7 @@ html {
 
 .network__linha-1,
 .network__linha-2 {
-   
+
 
     @include d(m) {
         max-height: 350px;
@@ -652,4 +655,22 @@ html {
 
     }
 
+}
+
+
+
+#tier {
+    background: $preto-bg;
+    padding:40px 0;
+    h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+        color: $branco-cinza;
+        max-width:470px;
+        span{
+            color:$dourado
+        }
+    }
 }
