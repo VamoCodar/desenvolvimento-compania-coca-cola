@@ -1025,3 +1025,39 @@ html {
     }
 
 }
+
+
+
+.mobile{ 
+    .accordion__wrapper ul{
+        display:none;
+    }
+    .accordion__wrapper h5{
+        position:relative;
+        vertical-align: middle;
+        cursor:pointer;
+        transition:0.3s ease;
+        &:after{
+            content:'▼';
+            color:$dourado;
+            position:absolute;
+            right:10px;
+            
+        }
+    }
+    .accordion__wrapper h5.active{
+        position:relative;
+        vertical-align: middle;
+        cursor:pointer;
+        &:after{
+            content:'▲';
+            color:$dourado;
+           
+            
+        }
+    }
+    .accordion__wrapper ul.active{
+        display:block;
+        animation: accordinDown 0.5s ease-in both;
+    }
+}
