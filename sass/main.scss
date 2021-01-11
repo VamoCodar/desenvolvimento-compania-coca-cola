@@ -808,14 +808,15 @@ html {
     background-image: url(../img/bg-criterios-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    @include d(s){
-        .container{
-            padding:0;
+
+    @include d(s) {
+        .container {
+            padding: 0;
         }
     }
 
     //height: 800px;
-   
+
 
     h1 {
         color: $preto;
@@ -849,7 +850,8 @@ html {
 
     display: flex;
     flex-wrap: wrap;
-     justify-content: center;
+    justify-content: center;
+
     h3 {
         font-weight: bold;
         font-size: 20px;
@@ -885,7 +887,7 @@ html {
         letter-spacing: 0.04em;
         margin-top: 2px;
         display: block;
-        font-weight:bold;
+        font-weight: bold;
     }
 
     .criterios__card {
@@ -923,49 +925,102 @@ html {
     .execution {
         order: 3;
         margin-top: -240px;
-        @include d(m){
-            margin-top:20px;
+
+        @include d(m) {
+            margin-top: 20px;
         }
     }
-    .performance{
-        order:2;
+
+    .performance {
+        order: 2;
     }
-    .criterios__card-xl{
-        max-width:initial;
+
+    .criterios__card-xl {
+        max-width: initial;
     }
-    .performance__img{
+
+    .performance__img {
         display: flex;
         flex-direction: column;
         align-items: start;
-        margin-left:20px;
-        @include d(s){
-        align-items: center;
+        margin-left: 20px;
+
+        @include d(s) {
+            align-items: center;
 
         }
-        img{
+
+        img {
             margin-left: 30px;
-            @include d(s){
-                margin:0 auto;
+
+            @include d(s) {
+                margin: 0 auto;
             }
         }
     }
-    .diference{
+
+    .diference {
         order: 4;
     }
-    .margin{
-        margin-left:15px;
+
+    .margin {
+        margin-left: 15px;
     }
 }
 
 
 //criterios 2
 
-#criterios__2{
+#criterios__2 {
     background-image: url(../img/bg-criterios-2.jpg);
-h1{
-    color:$branco-cinza;
-}
-    .laranja{
-        color:#F2994A;
+
+    h1 {
+        color: $branco-cinza;
     }
+
+    .laranja {
+        color: #F2994A;
+    }
+}
+
+
+#premios {
+    background-image: url(../img/background-white.jpg);
+    background-repeat: no-repeat;
+    padding: 80px 0;
+
+    h1 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+        color: $preto;
+        max-width: 500px;
+        margin-bottom: 40px;
+        @include d(s){
+            font-size:22px
+        }
+
+        span {
+            color: $dourado;
+        }
+    }
+
+    p {
+        max-width: 650px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 152%;
+        letter-spacing: 0.04em;
+
+        span {
+            color: $dourado;
+        }
+    }
+    @include d(s){
+        img{
+            margin-top:20px;
+        }
+    }
+
 }
