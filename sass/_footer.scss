@@ -6,6 +6,10 @@ footer {
 
     h3:last-child {
         margin-top: 10px;
+        @include d(m){
+        margin-top: 20px;
+
+        }
     }
 
     //.footer__wrapper {}
@@ -17,6 +21,9 @@ footer {
 
             @include d(m) {
                 // margin-bottom: 35px;
+                margin: 0 auto;
+                margin-top: 10px;
+
 
             }
         }
@@ -43,13 +50,18 @@ footer {
         margin-top: 0px;
 
         @include d(m) {
-            margin-top: 30px;
+            margin-top: 20px;
         }
     }
 
     h4 {
-        margin-top: auto;
+       
         font-size: 20px;
+        @include d(m) {
+            margin-top: 10px;
+        font-size: 18px;
+
+        }
     }
 
     a {
@@ -65,14 +77,17 @@ footer {
     .footer__sobre {
         h3 {
             margin-left: 15px;
-            @include d(m){
-                margin-left:0;
+
+            @include d(m) {
+                margin-left: 0;
             }
         }
 
-        ul{
-            @include d(m){
+        ul {
+            @include d(m) {
                 padding-left: 0;
+                margin-bottom: 0px;
+
             }
         }
 
@@ -80,8 +95,8 @@ footer {
             margin-left: -40px;
 
             @include d(m) {
-                
-                margin-left:0;
+
+                margin-left: 0;
             }
         }
     }
@@ -98,12 +113,16 @@ footer {
         justify-content: center;
         margin-top: 40px;
 
-       
+
     }
 
     .social__icon {
         max-width: 40px;
         transition: 0.3s ease;
+        @include d(s){
+        max-width: 50px;
+
+        }
 
         &:hover {
             transform: scale(1.3);

@@ -11,8 +11,9 @@
 
         }
     }
-    .row{
-        flex-wrap:nowrap;
+
+    .row {
+        flex-wrap: nowrap;
     }
 
     .menu__wrapper {
@@ -26,7 +27,8 @@
 
     .menu__lista {
         justify-content: flex-end;
-        .menu__link{
+
+        .menu__link {
             color: $branco-cinza;
             display: inline-block;
             font-family: Open Sans;
@@ -37,64 +39,73 @@
 
             &+a {
                 margin-left: 50px;
-                @include d(mm){
-                margin-left: 15px;
+
+                @include d(mm) {
+                    margin-left: 15px;
 
                 }
 
             }
         }
 
-       
+
 
     }
 }
 
-.dropdown{
-    
-    .dropdown-toggle{
+.dropdown {
+
+    .dropdown-toggle {
         font-size: 16px;
         margin-left: 50px;
         color: $dourado !important;
-        &:after{
+
+        &:after {
             color: $branco-cinza;
         }
-        @include d(mm){
+
+        @include d(mm) {
             margin-left: 15px;
 
-            }
-        
+        }
+
 
     }
-    .dropdown-menu{ //fundo do dropdown
+
+    .dropdown-menu {
+        //fundo do dropdown
         min-width: 10%;
         background: $preto-bg;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     }
-    .dropdown-item{
+
+    .dropdown-item {
         color: $branco-cinza;
-        &:hover{
+
+        &:hover {
             background-color: $preto;
         }
 
     }
-    button{
+
+    button {
         font-family: Open Sans;
 
     }
 }
 
-.mobile .menu{
+.mobile .menu {
     display: none;
 }
 
 
 
-.menu__mobile{
+.menu__mobile {
     display: none;
 }
-.mobile .menu__mobile{
-display: block;
+
+.mobile .menu__mobile {
+    display: block;
 }
 
 
@@ -103,6 +114,10 @@ display: block;
     padding-top: 20px;
     z-index: 99;
     background: $preto-bg;
+
+    .logo {
+        width: 40px;
+    }
 
     .hamburguer {
         margin-left: 5px;
@@ -193,10 +208,10 @@ display: block;
             margin-bottom: 20px;
             transition: 0.3s ease-in-out;
 
-            
+
             a {
                 padding: 15px;
-                padding-bottom:0px;
+                padding-bottom: 0px;
                 color: $branco-cinza;
                 font-weight: bold;
                 display: inline-block;
@@ -213,10 +228,11 @@ display: block;
 .menu__open .atalhos {
     display: block;
     z-index: 99;
-    overflow:hidden;
+    overflow: hidden;
+
     ul {
         animation: vemMenu 0.3s ease both;
-        
+
     }
 
 }
@@ -237,4 +253,3 @@ display: block;
 .navbar {
     padding-bottom: 20px;
 }
-

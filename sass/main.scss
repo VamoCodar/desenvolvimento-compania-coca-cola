@@ -98,6 +98,7 @@ html {
         .caption__p {
             margin-top: 80px;
             max-width: 600px;
+            font-weight: bold;
 
             @include d(s) {
                 margin-top: 30px;
@@ -109,6 +110,7 @@ html {
         .caption__p-2 {
             margin-top: 30px;
             max-width: 600px;
+            font-weight: bold;
 
             @include d(s) {
                 font-size: 14px;
@@ -134,24 +136,31 @@ html {
 
     .carousel-item {
         min-height: 450px;
+        position: relative;
 
 
     }
 
-    .carousel-item>img:not(.mapa) {
+    .carousel-item .carousel-bg {
         position: absolute;
         top: 0;
         left: 0;
-        min-height: 450px;
+        min-height: 460px;
         object-fit: cover;
+        margin: 0 auto;
+        right: 0;
+        width: 100%;
 
     }
+
 
     .mapa {
         position: absolute;
         top: 40px;
-        right: 0px;
+        left: 400px;
         z-index: -1;
+        width: 200px;
+        opacity: .5;
 
         @include d(m) {
             width: 120px;
@@ -170,8 +179,18 @@ html {
     .carousel-control-prev-icon {
         background-image: url(../img/arrow-left.svg);
     }
+
+    .carousel-trofeu {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 850px;
+
+    }
+
 }
 
+@import "trofeu__media";
 
 
 
@@ -304,11 +323,74 @@ html {
 }
 
 .intro__data {
-    @include d(m) {
-        margin-bottom: 25px;
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 15px;
+        color: $branco-cinza;
     }
 
-    .data {
+    h3 {
+        font-weight: normal;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: $branco-cinza;
+        text-align: center;
+        line-height: 150%;
+
+        span {
+            color: $dourado;
+        }
+    }
+
+    .intro__data-date,
+    .intro__data-time {
+        display: flex;
+        align-items: center;
+        margin-left: 90px;
+
+        h4 {
+            font-size: 18px;
+            color: $dourado;
+            font-weight: bold;
+        }
+
+        p {
+            color: $branco-cinza;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+    }
+
+
+}
+
+
+.intro__data-time {
+    h4 {
+        margin-bottom: auto;
+    }
+
+    margin-top: 0;
+
+    li p {
+        border-bottom: transparent !important;
+    }
+}
+
+
+
+
+@include d(m) {
+    margin-bottom: 25px;
+}
+
+/* .data {
         border-radius: 15px;
         position: absolute;
         right: 0px;
@@ -348,13 +430,13 @@ html {
 
         }
 
-    }
+    } */
 
 
-}
+
 
 .intro__detalhes {
-    h5 {
+    /*  h5 {
         margin: 0;
         padding-bottom: 15px;
         color: $branco-cinza;
@@ -401,7 +483,9 @@ html {
             border-top: 1px solid #aaaaaa;
 
         }
-    }
+    } */
+
+
 }
 
 //seção que es
@@ -411,8 +495,10 @@ html {
     background-image: url(../img/background-white.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    .que__es-wrapper{
+
+    .que__es-wrapper {
         align-items: center;
+        position: relative
     }
 
     @include d(s) {
@@ -449,27 +535,66 @@ html {
     }
 
     .que__es-img {
-        img {
-            margin-left: auto;
-        }
+        position: relative;
+        top: 180px;
 
         @include d(m) {
-            margin: 30px auto;
+            position: relative;
+            top: initial;
+            margin-top: 40px;
+        }
+
+        .que__es-trofeu {
+            img {
+                margin: 0 auto;
+                width: 200px;
+
+                @include d(m) {
+                    width: initial;
+                }
+            }
+        }
+
+        .que__es-grid {
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .que__es-i {
+            margin: 0 auto;
 
             img {
                 margin: 0 auto;
-                max-width: 300px;
             }
-        }
 
-        @include d(s) {
-            img {
-                max-width: 100%;
+            p {
+                text-align: center;
+                margin-top: 20px;
+
+                @include d(m) {
+                    font-size: 14px;
+                }
             }
+
         }
     }
 
+    .que__es-searching,
+    .que__es-network {
+        transform: translateY(-60px);
+    }
+
 }
+
+.margin__negativa {
+    margin-top: -60px;
+
+    @include d(m) {
+        margin-top: 0px
+    }
+}
+
+
 
 .que__es-icons {
     margin-bottom: 50px;
