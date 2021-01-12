@@ -411,6 +411,9 @@ html {
     background-image: url(../img/background-white.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    .que__es-wrapper{
+        align-items: center;
+    }
 
     @include d(s) {
         margin-top: 50px;
