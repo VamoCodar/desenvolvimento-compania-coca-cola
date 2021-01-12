@@ -37,13 +37,26 @@
 }
 
 @keyframes accordinDown {
-    0%{
-        opacity:0;
-       max-height:0;
+    0% {
+        opacity: 0;
+        max-height: 0;
     }
-    100%{
-        opacity:1;
-       max-height:1200px;
+
+    100% {
+        opacity: 1;
+        max-height: 4000px;
+
+    }
+}
+
+@keyframes accordionDown2 {
+    0% {       
+        max-height: 1300;
+    }
+
+    100% {
+        opacity: 1;
+        max-height: 4000px;
 
     }
 }
