@@ -17,8 +17,8 @@
 //@import "bootstrap/button-group";
 //@import "bootstrap/input-group";
 //@import "bootstrap/custom-forms";
-//@import "bootstrap/nav";
-//@import "bootstrap/navbar";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
 //@import "bootstrap/card";
 //@import "bootstrap/breadcrumb";
 //@import "bootstrap/pagination";
@@ -202,7 +202,7 @@ html {
             min-height: 730px;
 
         }
-        
+
 
 
 
@@ -1600,4 +1600,65 @@ html {
         letter-spacing: 0.04em;
         color: #E0E0E0;
     }
+}
+
+.documentos {
+
+    padding: 100px 0;
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    .nav-tabs .nav-link {
+        border: transparent;
+        border-top-left-radius: none;
+        border-top-right-radius: none;
+        background:transparent;
+        font-size: 20px;
+    }
+
+    .nav-tabs .nav-link.active {
+        border-bottom: 1px solid $dourado !important;
+        color:$dourado;
+        font-weight:bold;
+
+    }
+
+    .container__documentos {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid$preto-claro-3;
+        border-radius: 10px;
+        background:$branco-cinza;
+        ul{
+            margin-top:20px;
+            li{
+                max-width:60%;
+                padding:5px;
+                background:white;
+                margin-bottom: 10px;
+                @include d(s){
+                    max-width:100%;
+
+                }
+                a{
+                    display:block;
+                    position:relative;
+                }
+                span{
+                    display:inline-block;
+                    position: absolute;
+                    right: 0;
+                   
+                    img{
+                        width:20px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
 }
