@@ -64,6 +64,16 @@ html {
 .carousel {
     min-height: 450px;
 
+    @include d(m) {
+        min-height: 650px;
+
+    }
+
+    @include d(ss) {
+        min-height: 720px;
+
+    }
+
     .carousel-indicators {
         position: absolute;
         right: 0;
@@ -95,9 +105,13 @@ html {
         text-align: start;
         z-index: 4;
 
+        @include d(m) {
+            top: 120px;
+        }
+
         .caption__p {
-            margin-top: 80px;
-            max-width: 600px;
+            margin-top: 30px;
+            max-width: 550px;
             font-weight: bold;
 
             @include d(s) {
@@ -108,8 +122,8 @@ html {
         }
 
         .caption__p-2 {
-            margin-top: 30px;
-            max-width: 600px;
+            margin-top: 20px;
+            max-width: 550px;
             font-weight: bold;
 
             @include d(s) {
@@ -122,21 +136,49 @@ html {
     .carousel-inner {
         min-height: 450px;
 
+        @include d(m) {
+            min-height: 650px;
+
+        }
+
+        @include d(ss) {
+            min-height: 720px;
+
+        }
+
     }
 
     .caption__img {
         margin-top: 60px;
 
-        @include d(s) {
-            width: 90px;
-            margin-top: 20px;
+        @include d(m) {
 
+            /* left:0;
+            right:0;
+            margin:0 auto;
+            position:relative */
+            img {
+                margin: 0 auto;
+                width: 160px;
+                margin-top: 20px;
+            }
         }
     }
 
     .carousel-item {
-        min-height: 450px;
         position: relative;
+
+        min-height: 450px;
+
+        @include d(m) {
+            min-height: 650px;
+
+        }
+
+        @include d(ss) {
+            min-height: 720px;
+
+        }
 
 
     }
@@ -150,6 +192,19 @@ html {
         margin: 0 auto;
         right: 0;
         width: 100%;
+
+        @include d(m) {
+            min-height: 660px;
+
+        }
+
+        @include d(ss) {
+            min-height: 730px;
+
+        }
+        
+
+
 
     }
 
@@ -167,7 +222,12 @@ html {
         }
 
         @include d(s) {
-            width: 60px;
+            width: 160px;
+            opacity: .4;
+            left: 150px;
+            right: 0;
+            margin: 0 auto;
+            top: 250px;
 
         }
     }
@@ -184,8 +244,14 @@ html {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 850px;
+        width: 700px;
 
+        @include d(m) {
+            width: 260px;
+            top: 0;
+            left: 0;
+            margin: 0 auto;
+        }
     }
 
 }
@@ -205,6 +271,23 @@ html {
     padding: 30px 0;
     position: relative;
 
+
+    @include d(m) {
+        height: 600px;
+
+    }
+
+    @include d(s) {
+        height: 670px;
+
+    }
+
+    @include d(ss) {
+        height: 800px;
+
+    }
+
+
     .arrow__down {
         position: absolute;
         width: 20px;
@@ -220,33 +303,23 @@ html {
         display: block;
     }
 
-    @include d(m) {
-        height: 510px;
+    .intro__detalhes {
 
-    }
-
-    @include d(s) {
-        height: 600px;
-
-    }
-
-    @include d(ss) {
-        height: 680px;
-
-    }
-
-    li {
-        margin-bottom: 5px;
-        color: $preto-claro-1;
-
-        span {
-            color: $dourado;
+        li+li {
+            padding-top: 10px;
+            border-top: 1px solid $preto;
         }
-    }
 
-    li+li {
-        padding-top: 10px;
-        border-top: 1px solid $preto;
+        li {
+            margin-bottom: 5px;
+            color: $branco-cinza;
+            font-size: 14px;
+
+            span {
+                color: $dourado;
+            }
+        }
+
     }
 
     .intro__data-style2 {
@@ -265,7 +338,14 @@ html {
 
 }
 
-.intro__data-style {
+@media screen and(max-width:358px) {
+    #intro__info {
+        height: 100%;
+
+    }
+}
+
+/* .intro__data-style {
     display: flex;
     background: #000;
     color: $branco-cinza;
@@ -320,8 +400,10 @@ html {
     }
 
 
-}
+} */
 
+
+/* DATA DA INTRO */
 .intro__data {
     h2 {
         text-align: center;
@@ -348,39 +430,97 @@ html {
         }
     }
 
-    .intro__data-date,
-    .intro__data-time {
+    .intro__data-date {
         display: flex;
         align-items: center;
         margin-left: 90px;
 
-        h4 {
+        @include d(s) {
+            margin-left: 0px;
+        }
+
+        h4 span {
             font-size: 18px;
             color: $dourado;
             font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+
+
         }
+
+        h4 {
+            color: $branco-cinza;
+            margin-left: 0px;
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+
 
         p {
             color: $branco-cinza;
             margin-top: 15px;
-            margin-left: 10px;
+            margin-left: 0px;
         }
     }
 
 
 }
 
+.intro__data-container {
+    @include d(m) {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
 
 .intro__data-time {
+    margin-left: 90px;
+
+    @include d(s) {
+        margin-left: 0px;
+    }
+
     h4 {
+        font-size: 18px;
+        color: $dourado;
+        font-weight: bold;
         margin-bottom: auto;
+        margin-top: 0px;
+        margin-right: 10px;
+
     }
 
-    margin-top: 0;
 
-    li p {
-        border-bottom: transparent !important;
+
+
+    li {
+        p {
+            color: $branco-cinza;
+            margin-left: 0px;
+            margin-top: 5px;
+            font-size: 14px;
+
+        }
+
+        span {
+            color: $dourado;
+
+        }
+
+
+        p.first {
+            margin-top: 0px;
+        }
     }
+
+
+
+
 }
 
 
@@ -436,14 +576,14 @@ html {
 
 
 .intro__detalhes {
-    /*  h5 {
+    h5 {
         margin: 0;
         padding-bottom: 15px;
         color: $branco-cinza;
         display: block;
         border-bottom: 1px solid $preto;
-
-
+        font-weight: bold;
+        font-size: 24px;
     }
 
 
@@ -483,7 +623,7 @@ html {
             border-top: 1px solid #aaaaaa;
 
         }
-    } */
+    }
 
 
 }
@@ -502,7 +642,7 @@ html {
     }
 
     @include d(s) {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     h2,
