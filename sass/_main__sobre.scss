@@ -1,0 +1,22 @@
+
+body#pagina__sobre {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 20px;
+        height: 45px;
+        background-color: $amareloNew;
+        position: absolute;
+        top: 184px;
+    }
+}
+
+
+#pagina__sobre{
+   
+   @import "sobre__stilos";
+    
+    
+}

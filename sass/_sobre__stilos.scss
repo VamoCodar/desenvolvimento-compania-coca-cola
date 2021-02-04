@@ -1,0 +1,1096 @@
+ 
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .container {
+        max-width: 1280px;
+    }
+    
+    .d__flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    // TEXTOS E BACKGROUND =================
+    
+    #intro {
+        padding-top: 180px;
+        background-image: url(../img/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        padding-bottom: 70px;
+        margin-bottom: -20px;
+    
+        .intro__textos {
+            h1 {
+                color: $amareloNew;
+                margin-bottom: 20px;
+                margin-left: 10px;
+    
+            }
+    
+            p {
+                color: $branco-cinza;
+                font-size: 18px;
+                margin-bottom: 20px;
+    
+                span {
+                    color: $amareloNew;
+    
+                }
+            }
+        }
+    
+        p.intro__adicional {
+            font-size: 12px;
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+    
+    // CARDS ================
+    
+    .intro__cards {
+        .borda {
+            width: 90px;
+            height: 90px;
+            border-radius: 20%;
+            border: 3px solid $branco-cinza;
+            position: relative;
+            overflow: hidden;
+    
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+        }
+    
+        .intro__wrapper {
+            border-radius: 20px;
+            border: 1px solid #404040;
+            padding: 30px 10px;
+            justify-content: center;
+    
+            .intro__card {
+                margin: 10px;
+                width: calc(12.5% - 20px);
+                min-width: 120px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+    
+                h3 {
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 0px;
+                }
+    
+                p {
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+    
+                .border__bottom {
+                    border-bottom: 1px solid $branco-cinza;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    
+    
+    }
+    
+    
+    //SEÇÃO 2 =======================
+    
+    #presentamos {
+        padding: 40px 0;
+        background-image: url(../img/background-white.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    
+        @include d(m) {
+            padding: 60px 0;
+    
+        }
+    
+        .container {
+            max-width: 1100px;
+        }
+    
+        h1 {
+            color: $branco-cinza-2;
+            font-size: 46px;
+            font-weight: bold;
+            max-width: 700px;
+    
+            @include d(m) {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+    
+        .presentamos__wrapper {
+            align-items: center;
+    
+            @include d(m) {
+                flex-direction: column;
+                justify-content: center;
+            }
+    
+        }
+    
+        .presentamos__logo2 {
+            width: 250px;
+    
+            img {
+                margin-left: auto;
+            }
+    
+            @include d(m) {
+    
+                img {
+                    margin: 30px auto;
+                }
+            }
+        }
+    
+        .presentamos__logo1 {
+            max-width: 300px;
+            margin-left: auto;
+    
+            @include d(m) {
+                max-width: 150px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    #mission {
+        background-color: #202020;
+        padding: 60px 0;
+    
+    
+        p {
+            color: $branco-cinza;
+            line-height: 160%;
+            font-size: 18px;
+            margin-bottom: 20px;
+    
+            span {
+                color: $amareloNew;
+            }
+        }
+    
+        .mission__wrapper {
+            justify-content: space-around;
+        }
+    
+        .mission__map {
+            position: relative;
+    
+            @include d(m) {
+                width: 300px;
+                margin-top: 30px;
+                min-width: 300px;
+                overflow: hidden;
+            }
+    
+            //textos do mapa
+            .net {
+                position: absolute;
+                top: 40px;
+                right: 130px;
+                font-size: 14px;
+    
+                @include d(m) {
+                    position: absolute;
+                    top: 15px;
+                    right: 50px;
+                    font-size: 10px;
+                    opacity: .7;
+                }
+            }
+    
+            .mind {
+                position: absolute;
+                right: 140px;
+                max-width: 100px;
+                top: 170px;
+                font-size: 14px;
+    
+                @include d(m) {
+                    opacity: .7;
+                    right: 70px;
+                    max-width: 50px;
+                    top: 82px;
+                    font-size: 10px;
+                }
+            }
+    
+            .excelence {
+                position: absolute;
+                right: 160px;
+                max-width: 100px;
+                font-size: 14px;
+                top: 260px;
+    
+                @include d(m) {
+                    position: absolute;
+                    right: 25px;
+                    max-width: 100px;
+                    font-size: 10px;
+                    top: 130px;
+                    opacity: .7;
+                }
+            }
+        }
+    
+    }
+    
+    #mission {
+        .mission__wrapper-2 {
+            justify-content: space-around;
+    
+            .mission__2-text {
+                order: 2;
+    
+                @include d(m) {
+                    order: -1;
+                }
+            }
+    
+            margin-top:60px;
+    
+            p {
+                color: $branco-cinza;
+                line-height: 160%;
+                font-size: 18px;
+                margin-bottom: 20px;
+    
+                span {
+                    color: $amareloNew;
+                }
+            }
+        }
+    
+        .mission__nuvem {
+            position: relative;
+            overflow: hidden;
+    
+            img {
+                width: 356px;
+                min-width: 356px;
+    
+                @include d(m) {
+                    width: 300px;
+                    min-width: 300px;
+                }
+            }
+    
+            p {
+                position: absolute;
+                font-size: 12px;
+                text-transform: uppercase;
+    
+                @include d(m) {
+                    font-size: 10px;
+                }
+            }
+    
+            .plazos {
+                top: 33px;
+                left: 110px;
+    
+                @include d(m) {
+                    top: 28px;
+                    left: 100px;
+                }
+            }
+    
+            .lealtad {
+                top: 26px;
+                left: 190px;
+    
+                @include d(m) {
+                    top: 22px;
+                    left: 155px;
+                }
+            }
+    
+            .objetivos {
+                top: 73px;
+                left: 19px;
+    
+                @include d(m) {
+                    top: 63px;
+                }
+            }
+    
+            .recursos {
+                top: 145px;
+                left: 19px;
+    
+                @include d(m) {
+                    top: 122px;
+                }
+            }
+    
+            .sustentabilidad {
+                top: 205px;
+                left: 70px;
+    
+                @include d(m) {
+                    top: 170px;
+                    left: 65px;
+                }
+            }
+    
+            .diversidad {
+                top: 196px;
+                right: 90px;
+    
+                @include d(m) {
+                    top: 122px;
+                    right: 35px;
+                }
+            }
+    
+            .responsabilidad {
+                top: 146px;
+                right: 10px;
+    
+                @include d(m) {
+                    top: 166px;
+                    right: 40px;
+                }
+            }
+    
+            .mercado {
+                top: 70px;
+                right: 35px;
+    
+                @include d(m) {
+                    top: 60px
+                }
+            }
+    
+            .crescimento {
+                font-size: 14px;
+                top: 85px;
+                max-width: 100px;
+                left: 120px;
+                font-weight: bold;
+    
+                @include d(m) {
+                    top: 72px;
+                    font-size: 12px;
+                    left: 100px;
+                }
+            }
+        }
+    }
+    
+    //modificaço~es mobile 
+    #apuestas {
+        @include d(m) {
+            .cards {
+                max-width: 600px;
+            }
+    
+            .card__1,
+            .card__2 {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-around;
+    
+                    li:first-child {
+                        display: flex;
+                        flex-direction: column;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                    }
+    
+                    img {
+                        width: 70px !important;
+                        margin: 0 auto;
+                        height: 70px !important;
+                        margin-top: 0px;
+                    }
+                }
+    
+            }
+    
+            .coke,
+            .flavors,
+            .first,
+            .second {
+                display: none;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    // SECAO PRIORITES =========
+    #priorities {
+        padding: 60px 0;
+        background-color: $preto-bg;
+    
+        .text1 {
+            margin-bottom: 30px;
+            font-size: 22px;
+    
+            @include d(m) {
+                text-align: start;
+            }
+        }
+    
+        p {
+            color: #ededed;
+            font-size: 20px;
+            // margin-bottom: 15px;
+    
+            @include d(m) {
+                text-align: center;
+            }
+    
+            span {
+                color: $amareloNew;
+            }
+    
+            i {
+                padding: 5px;
+                border-radius: 50%;
+                font-size: 32px;
+                border: 3px solid #F2F2F2;
+                display: inline-block;
+                text-transform: initial;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                vertical-align: middle;
+                margin-right: 15px;
+                font-style: initial;
+            }
+        }
+    
+        i {
+            padding-top: 6px;
+            border-radius: 50%;
+            border: 3px solid #F2F2F2;
+            color: #ededed;
+            display: inline-block;
+            text-transform: initial;
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 15px;
+            font-style: initial;
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 32px;
+    
+            @include d(m) {
+                margin-bottom: 10px;
+                margin-top: 20px;
+                padding-top: 6px;
+            }
+    
+    
+        }
+    
+        .priorities__icon {
+            width: 220px;
+            float: right;
+            vertical-align: middle;
+            margin-top: -20px;
+    
+            img {
+                margin-left: 4px;
+                width: 45px;
+                height: 45px;
+            }
+    
+            @include d(m) {
+                //width: 220px;
+                float: none;
+                display: flex;
+                justify-content: center;
+                margin-top: 0px;
+            }
+        }
+    
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: $branco-cinza;
+            margin-top: 40px;
+            margin-bottom: 20px;
+    
+            span {
+                color: $amareloNew;
+            }
+        }
+    
+        .priorities__list {
+            i {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+                min-width: 50px;
+                min-height: 50px;
+    
+                @include d(m) {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 22px;
+                    min-width: 35px;
+                    min-height: 35px;
+                    padding-top: 1px;
+                    // padding-left: 9px;
+                    margin-bottom: 2px
+                }
+    
+            }
+    
+            p {
+                @include d(m) {
+                    font-size: 18px;
+                }
+            }
+    
+            @include d(m) {
+                margin: 0 auto;
+            }
+        }
+    
+        .lista__wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-bottom: 10px;
+    
+            @include d(m) {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 0px;
+                flex-direction: column;
+            }
+        }
+    
+    
+    
+        p {
+            @include d(m) {
+                font-size: 18px;
+                max-width: 500px;
+                margin-bottom: 0px
+            }
+        }
+    }
+    
+    .priorities__icon2 {
+        @include d(m) {
+            img {
+                width: 100px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    
+    // DRIVER SECTION ===================
+    
+    #drivers {
+        padding: 60px 0;
+    
+        h1 {
+            color: #767171;
+            max-width: 850px;
+            text-align: end;
+            font-weight: bold;
+            margin-bottom: 40px;
+    
+            @include d(m) {
+                text-align: start;
+                font-size: 28px;
+            }
+        }
+    
+        span {
+            color: $amareloNew;
+        }
+    
+        .drivers__wrapper {
+            align-items: center;
+        }
+    
+        li {
+            margin-bottom: 30px;
+            display: flex;
+    
+            p {
+                color: #767171;
+                font-size: 24px;
+                display: inline;
+                vertical-align: middle;
+    
+                @include d(m) {
+                    font-size: 18px;
+    
+                }
+            }
+    
+            &:before {
+                content: "";
+                background-image: url(../img/sobre/seta.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                min-height: 40px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+    
+    
+        }
+    
+        .aviao {
+            img {
+                @include d(m) {
+                    margin: 0 auto;
+                    width: 130px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    
+    
+    //secao apuestas ===============
+    
+    #apuestas {
+        background-color: #202020;
+        padding: 60px 0;
+        color: $branco-cinza;
+    
+        h1 {
+            font-size: 26px;
+            color: $branco-cinza;
+    
+            span {
+                color: $amareloNew;
+            }
+        }
+    
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #f2f2f2;
+            margin-left: 20px;
+            margin-bottom: 5px;
+    
+        }
+    
+        .apuestas__wrapper {
+            align-items: center;
+        }
+    
+        .cards {
+            background-color: #262626;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+    
+            border: 1px solid #595959;
+    
+            ul {
+                min-width: 165px;
+                margin-bottom: 25px;
+    
+                li {
+                    p {
+                        width: 120px;
+                        text-align: center;
+                        margin: 5px auto;
+                    }
+                }
+    
+                span {
+                    font-size: 25px;
+                    font-family: 'Fraunces', serif;
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                    // color:$amareloNew;
+    
+                    &:after {
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        display: inline-block;
+                        background: $amareloNew;
+                        margin-left: 3px;
+                        border-radius: 50%;
+                    }
+    
+    
+                }
+    
+                img {
+                    width: 80px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    
+        .apuestas__seta {
+            @include d(m) {
+                display: none;
+            }
+        }
+    
+        .col-md-10 {
+            @include d(m) {
+                margin: 0 auto;
+                padding: 0
+            }
+        }
+    
+        .coke {
+            background: #ff0000;
+            padding: 5px 0;
+            text-align: center;
+            align-self: flex-start;
+            border-radius: 6px;
+            margin-right: auto;
+    
+        }
+    
+        .flavors {
+            background: #ffa200;
+            padding: 5px 0;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+    }
+    
+    //card 2 
+    #apuestas {
+        .apuestas__quebra {
+            margin-top: 30px;
+            font-size: 22px;
+            color: $branco-cinza;
+            font-weight: bold;
+            margin-left: 20px;
+            margin-bottom: 5px;
+    
+        }
+    
+        .card__2 {
+            ul {
+                li {
+    
+                    .img-9,
+                    .img-10 {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+    
+        .first {
+            text-align: center;
+        }
+    
+        .hidratation,
+        .nutrition,
+        .emerging {
+            padding: 5px 0;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+    
+        .hidratation {
+            background: #69c9ce;
+        }
+    
+        .nutrition {
+            background: #92d050;
+        }
+    
+        .emerging {
+            background: #fff2cc;
+            color: $preto-bg;
+        }
+    
+        .card-2__wrapper {
+            width: 100%;
+            align-items: flex-end;
+        }
+    
+        h3 {
+            font-weight: bold;
+            text-align: center;
+            font-weight: 34px;
+    
+            @include d(m) {
+                font-size: 22px;
+                text-align: start;
+    
+            }
+    
+            span {
+                color: $amareloNew;
+                line-height: 140%;
+            }
+        }
+    
+        .cards {
+            padding: 30px 10px !important;
+            margin: 0 auto;
+        }
+    
+        .img-9,
+        .img-10 {
+            margin-top: 0px !important;
+        }
+    
+    }
+    
+    
+    //CARDS ULTIMA SEÇÃO =========================
+    
+    #cards__copa {
+        padding: 40px 0;
+        background: $preto-bg;
+    
+        ul.card__copa {
+            background-color: #202020;
+            height: 530px;
+            text-align: center;
+            padding: 45px 10px;
+            color: $branco-cinza;
+            position: relative;
+            border: 4px solid $branco-cinza;
+            overflow: hidden;
+            min-width: 290px;
+            max-width: 320px;
+            will-change: transform;
+            @include d(ss) {
+                min-width: 270px;
+                max-width: 270px;
+    
+    
+            }
+    
+            h2 {
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+    
+            p {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+    
+            i {
+                font-size: 52px;
+                display: inline-block;
+                text-transform: initial;
+                width: 60px;
+                height: 60px;
+                font-style: initial;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                font-family: 'Fraunces', serif;
+                color: #c6c6c6;
+    
+            }
+    
+            span {
+                img {
+                    position: absolute;
+                    top: 3px;
+                    left: 2px;
+                    width: 30px;
+                }
+            }
+    
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 45px solid transparent;
+                border-right: 45px solid transparent;
+                border-bottom: 45px solid $branco-cinza;
+                position: absolute;
+                left: -29px;
+                top: -8px;
+                transform: rotate(-45deg);
+            }
+        }
+    
+        .card__1-img {
+            img {
+                height: 220px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    #cards__copa {
+        .card__copa-2 {
+            ol {
+                font-size: 12px;
+    
+                li {
+                    border-bottom: 1px solid $branco-cinza;
+                    padding: 5px;
+                    margin: 0 20px;
+    
+                    p {
+                        display: inline-block;
+                    }
+                }
+    
+            }
+        }
+    
+    }
+    
+    .img__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 50%;
+        float: right;
+    
+        img {
+            width: 35px;
+            margin: 0 auto;
+        }
+    
+        p {
+            text-transform: uppercase;
+            color: $dourado;
+            opacity: .7;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    
+        h3 {
+            margin: 0;
+        }
+    }
+    
+    .linha {
+        width: 100%;
+        height: 1px;
+        background-color: $branco-cinza;
+        opacity: .6;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+    
+    #cards__copa {
+        .img__metade {
+            width: 40%;
+            float: left;
+    
+            img {
+                width: 100px;
+                margin: 0 auto;
+            }
+    
+        }
+    
+        .card__copa-3 {
+            .img__text-1 {
+                float: none;
+                margin-top: 35px;
+                width: initial;
+    
+                img {
+                    width: 50px;
+                }
+            }
+    
+            .img__text-2 {
+                padding-top: 10px;
+            }
+    
+            .img__text-4 {
+                img {
+                    width: 90px;
+                }
+            }
+        }
+    }
+    
+    .card__copa-4 {
+        .img__text {
+            img {
+                width: 55px;
+            }
+        }
+    
+        .img__metade {
+            width: 50% !important;
+            float: left;
+        }
+    }
+    
+    
+    .prox,
+    .ant {
+        display: none;
+    }
+    
+    @media (max-width:1210px) {
+        .setas {
+            justify-content: space-between;
+            padding: 30px;
+            margin: 0 auto;
+            margin-left: -10px;
+            overflow: hidden;
+        }
+    
+        .prox,
+        .ant {
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+        }
+    
+        .card__copa+.card__copa {
+            margin-left: 15px;
+        }
+    }

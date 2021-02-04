@@ -1,7 +1,43 @@
 $dourado:#CEA556;
+$amareloNew:#ffc000;
 $preto:#333333;
 $preto-claro-1:#828282;
 $preto-claro-2:#4F4F4F;
 $preto-claro-3:#BDBDBD;
 $preto-bg:#121212;
 $branco-cinza:#F2F2F2;
+$branco-cinza-2:#a3a9b6;
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+@mixin bg-props-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@mixin bg-props-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+@mixin tituloSpan($fonte:44px, $peso:bold){
+    color: white;
+    font-weight: $peso;
+    line-height: 140%;
+    font-size: $fonte;
+    position: relative;
+  
+    span{
+        color: $amareloNew;
+    }
+}
