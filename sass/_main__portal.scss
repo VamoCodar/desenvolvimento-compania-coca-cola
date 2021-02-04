@@ -446,6 +446,9 @@ body#pagina__portal {
                     font-weight: bold;
 
                 }
+                li:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -550,7 +553,7 @@ body#pagina__portal {
                     @include d(s) {
                         height: 60px;
                         width: 60px;
-                    min-width: 60px;
+                        min-width: 60px;
 
                     }
                 }
@@ -570,18 +573,54 @@ body#pagina__portal {
 
                 span {
                     font-size: 24px;
-                    color:white;
+                    color: white;
                     font-weight: bold;
 
                 }
+            }
+
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .overview__list {
+            display: flex;
+            width: 100%;
+            color: white;
+            justify-content: center;
+            @include d(s){
+            justify-content: initial;
+
+            }
+
+            @include d(m) {
+                flex-flow: wrap;
+            }
+
+            p {
+                font-size: 14px;
+                color: rgb(233, 233, 233);
+                margin-bottom: 5px;
+
+                span {
+                    font-size: 8px;
+                    font-style: italic;
+
+                }
+            }
+
+            .list {
+                margin: 10px;
             }
         }
 
         .overview__1 {
             background-color: #c00000;
             width: 50%;
-            @include d(m){
-                width:100%;
+
+            @include d(m) {
+                width: 100%;
             }
         }
 
@@ -589,15 +628,20 @@ body#pagina__portal {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include d(m){
+            flex-flow: wrap row;
+
+            @include d(m) {
                 flex-flow: wrap column;
             }
 
-            img[alt="cluster"]{
+            img[alt="cluster"] {
                 object-fit: contain;
                 max-width: 120px;
             }
         }
+    }
+    .overview__laranja{
+        background-color:#ed7d31 ;
     }
 
 
