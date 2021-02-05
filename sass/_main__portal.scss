@@ -1308,9 +1308,10 @@ body#pagina__portal {
                 }
             }
         }
-         .container{
-            @include d(s){
-                padding:0 10px;
+
+        .container {
+            @include d(s) {
+                padding: 0 10px;
             }
         }
 
@@ -1324,9 +1325,10 @@ body#pagina__portal {
         background-position: right;
         color: white;
         padding-bottom: 40px;
-        .container{
-            @include d(s){
-                padding:0 10px;
+
+        .container {
+            @include d(s) {
+                padding: 0 10px;
             }
         }
 
@@ -1404,7 +1406,7 @@ body#pagina__portal {
 
             @include d(s) {
                 font-size: 16px;
-                text-align:center;
+                text-align: center;
             }
         }
 
@@ -1457,23 +1459,489 @@ body#pagina__portal {
                 content: "";
                 display: inline-block;
                 @include bg-props-contain;
-                width:12px;
-                height:12px;
-                margin-right:5px;
+                width: 12px;
+                height: 12px;
+                margin-right: 5px;
                 background-image: url(../img/page-portal/trem-1.png);
 
             }
-            &-2{
+
+            &-2 {
                 &:before {
                     content: "";
                     display: inline-block;
                     @include bg-props-contain;
-                    width:12px;
-                    height:12px;
-                    margin-right:5px;
-                background-image: url(../img/page-portal/trem-2.png);
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 5px;
+                    background-image: url(../img/page-portal/trem-2.png);
 
                 }
+            }
+        }
+    }
+
+    #fabricantes {
+        color: white;
+        background: $preto-bg;
+        //padding-bottom: 40px;
+
+        .passo__header {
+            background-color: #1b1b1b;
+            padding: 10px 0;
+            border-bottom: 2px solid $amareloNew;
+            margin-top: 1px;
+
+            .align-center {
+                align-items: center;
+
+                @include d(m) {
+                    align-items: initial;
+
+                }
+            }
+
+            h2 {
+                @include tituloSpan(20px, 500);
+                text-align: center;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            img {
+                max-width: 120px;
+
+                @include d(m) {
+                    margin: 0 auto;
+                    max-width: 120px;
+
+                }
+            }
+
+
+
+            .copa-2 {
+                @include d(m) {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .fabricantes__wrapper {
+            // flex-direction: column;
+
+            .fab__1 {
+                background: #262626;
+                padding-bottom: 40px;
+            }
+
+            .bola {
+                max-width: 180px;
+                margin: 20px auto;
+            }
+
+            p.melhor {
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .estrelas {
+                margin-left: auto;
+                width: 100px;
+
+                position: relative;
+                bottom: -25px;
+            }
+
+            .medalha {
+                max-width: 150px;
+
+                @include d(s) {
+                    max-width: 120px;
+                    margin-left: 20px;
+                }
+            }
+
+            .secao__medalha {
+                p {
+                    max-width: 150px;
+                    margin-left: auto;
+                    margin-top: -105px;
+                    font-size: 14px;
+
+                    @include d(s) {
+                        margin-top: -60px;
+                    }
+                }
+            }
+        }
+
+        .fab__2 {
+            background: #595959;
+            position: relative;
+
+            &:after {
+                content: "";
+                @include bg-props-contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 120px;
+                height: 150px;
+                display: block;
+                left: -37px;
+                top: 100px;
+                background-image: url(../img/page-portal/seta-1.png);
+
+                @include d(m) {
+                    display: none;
+                }
+            }
+
+            &:before {
+                content: "";
+                @include bg-props-contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 120px;
+                height: 150px;
+                display: block;
+                right: -37px;
+                top: 400px;
+                background-image: url(../img/page-portal/seta-2.png);
+
+                z-index: 10;
+
+                @include d(m) {
+                    display: none;
+                }
+            }
+
+            ul {
+                margin: 20px auto;
+                justify-content: center;
+                border-bottom: 2px solid #a6a6a6;
+
+                li {
+                    img {
+                        max-width: 80px;
+                        margin: 10px auto;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    margin: 10px;
+                    font-size: 14px;
+
+                    span {
+                        color: $amareloNew;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .fab__2-img-centro {
+                max-width: 250px;
+                margin: 20px auto;
+
+                @include d(s) {
+                    max-width: 150px;
+                }
+            }
+
+            .quote {
+                font-size: 12px;
+                color: rgb(232, 232, 232);
+                margin-top: 20px;
+                display: inline-block;
+            }
+
+            .share {
+                position: absolute;
+                right: 100px;
+                bottom: 20px;
+
+                @include d(s) {
+
+                    position: absolute;
+                    right: 100px;
+                    bottom: 50px;
+                    max-width: 80px;
+                }
+            }
+        }
+
+        .container__s {
+            @include d(s) {
+                padding: 0;
+            }
+        }
+
+        @keyframes roda {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fab__3 {
+            background-color: #262626;
+            position: relative;
+
+            .trofeu-estrela {
+                max-width: 170px;
+                margin: 20px auto;
+                position: relative;
+
+
+            }
+
+            .estrela__trofeu {
+                position: relative;
+                max-width: 170px;
+                margin: 40px auto;
+
+                &:after {
+                    content: "";
+                    @include bg-props-contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 220px;
+                    height: 220px;
+                    display: block;
+                    right: -25px;
+                    top: -25px;
+                    background-image: url(../img/page-portal/circulo-star.svg);
+
+                    z-index: 10;
+                    animation: 20s infinite roda linear;
+                }
+            }
+
+            h3 {
+                font-size: 22px;
+                text-align: center;
+
+                span {
+                    color: $amareloNew;
+                }
+            }
+        }
+
+    }
+
+    #estrutura {
+        padding: 40px 0;
+        background-color: #151515;
+        color: white;
+        overflow: hidden;
+
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            position: relative;
+            margin-bottom: 30px;
+
+            span {
+                color: $amareloNew;
+                font-weight: 700;
+            }
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 45px;
+                background-color: $amareloNew;
+                position: absolute;
+                top: 5px;
+                left: -30px;
+            }
+
+            @include d(s) {
+                font-size: 20px;
+            }
+        }
+
+        .estrutura__linha {
+            padding: 20px 10px;
+            border-radius: 20px;
+            border: 2px solid $amareloNew;
+
+            @include d(s) {
+                border: none;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            margin: 10px 0;
+            @include d(s){
+                margin-top:25px;
+            }
+        }
+
+        ul {
+            border-radius: 20px;
+            background: #262626;
+            padding: 10px 20px;
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: center;
+            align-items: center;
+            min-height: 410px;
+
+            p {
+                text-align: center;
+            }
+
+            .proc__imng {
+
+                position: relative;
+
+                img {
+                    margin: 10px auto;
+                    max-width: 120px;
+                    max-height: 120px;
+                    object-fit: contain;
+                    z-index: 10;
+
+
+                }
+
+            }
+
+        }
+
+        h1:last-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    #robusto {
+        padding-bottom: 40px;
+        background-color: #161616;
+        color: white;
+
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            position: relative;
+            margin-bottom: 30px;
+
+            span {
+                color: $amareloNew;
+                font-weight: 700;
+            }
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 45px;
+                background-color: $amareloNew;
+                position: absolute;
+                top: 5px;
+                left: -30px;
+            }
+
+            @include d(s) {
+                font-size: 20px;
+            }
+        }
+
+        .robusto__linha {
+            padding: 20px 10px;
+            border-radius: 20px;
+            border: 2px solid $amareloNew;
+
+            .d__flex {
+                gap: 10px;
+                justify-content: center;
+            }
+
+            @include d(s) {
+                border: none;
+            }
+        }
+
+        .col-lg-3 {
+            background: #262626;
+            border-radius: 20px;
+            flex: 0 0 calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            padding-bottom: 30px;
+
+            @include d(m) {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 20px;
+                margin-top: 50px;
+                @include d(s){
+                    margin-top:20px;
+                }
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 10px;
+
+                @include d(s) {
+                    font-size: 14px;
+                }
+            }
+
+            &:after {
+
+                content: "";
+                @include bg-props-contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 80px;
+                height: 150px;
+                display: block;
+                right: -40px;
+                top: 90px;
+                background-image: url(../img/page-portal/seta-2.png);
+
+                z-index: 10;
+
+                @include d(m) {
+                    display: none;
+                }
+
+            }
+
+            img {
+                max-width: 120px;
+                margin: 0 auto;
+            }
+        }
+
+        .col-lg-3:last-child {
+            &:after {
+                display: none;
             }
         }
     }
