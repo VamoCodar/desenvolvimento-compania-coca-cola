@@ -853,7 +853,6 @@ body#pagina__portal {
             padding: 10px 0;
             border-bottom: 2px solid $amareloNew;
             margin-top: 1px;
-            margin-bottom: 30px;
 
             .align-center {
                 align-items: center;
@@ -919,8 +918,9 @@ body#pagina__portal {
     #cards__copa ul.card__copa {
         height: 545px !important;
     }
-    .d2c{
-        width:45px;
+
+    .d2c img {
+        width: 45px;
     }
 
     @media (max-width:1210px) {
@@ -961,5 +961,192 @@ body#pagina__portal {
             }
 
         }
+    }
+
+    #metricas {
+        .passo__header {
+            background-color: #1b1b1b;
+            padding: 10px 0;
+            border-bottom: 2px solid $amareloNew;
+            margin-top: 1px;
+
+            .align-center {
+                align-items: center;
+
+                @include d(m) {
+                    align-items: initial;
+
+                }
+            }
+
+            h2 {
+                @include tituloSpan(20px, 500);
+                text-align: center;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            img {
+                max-width: 120px;
+
+                @include d(m) {
+                    margin: 0 auto;
+                    max-width: 120px;
+
+                }
+            }
+
+
+
+            .copa-2 {
+                @include d(m) {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .metricas__relative {
+            position: relative;
+        }
+
+        .metricas__1 {
+            img {
+                width: 250px;
+                position: absolute;
+                top: -30px;
+                z-index: -1;
+            }
+
+            p:nth-child(2) {
+                position: absolute;
+                font-size: 18px;
+                color: white;
+                font-weight: bold;
+                max-width: 150px;
+                left: 60px;
+                top: 15px;
+            }
+
+            p:nth-child(3) {
+                position: absolute;
+                font-size: 18px;
+                color: white;
+                font-weight: bold;
+                max-width: 165px;
+                left: 39px;
+                top: 118px;
+            }
+        }
+
+        .chave {
+            position: absolute;
+            right: 0;
+
+            @include d(m) {
+                top: 210px;
+            }
+        }
+
+        .metricas__grid {
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-template-rows: repeat(10, 60px);
+            margin-left: auto;
+            max-width: 800px;
+            padding-top: 80px;
+
+            @include d(m) {
+                display: flex;
+                flex-direction: column;
+                padding-top: 240px;
+            }
+
+            img {
+                padding: 5px;
+                border-radius: 10px;
+            }
+        }
+
+        .grid {
+            &-1 {
+                grid-row: span 3;
+                margin-top: 20px;
+
+                @include d(m) {
+                    margin-top: 0px;
+
+                }
+
+            }
+
+            &-2 {
+                grid-row: 1 / 5;
+                margin-top: 20px;
+
+                @include d(m) {
+                    margin-top: 0px;
+
+                }
+
+            }
+
+            &-3 {
+                grid-column: 2;
+                grid-row: 6/ 10;
+            }
+
+            &-4 {
+                grid-column: 1;
+                grid-row: 4/ 9;
+            }
+        }
+
+        .img-5 {
+            max-width: 330px;
+            border-radius: 10px;
+            margin-top: -415px;
+
+            @include d(m) {
+                margin-top: 10px;
+                margin: 10px auto;
+                max-width: 100% !important;
+            }
+        }
+
+        @media (max-width:1200px) {
+            .img-5 {
+                max-width: 180px;
+            }
+        }
+        .impo{
+            max-width:300px;
+            h5{
+                color:red;
+                font-weight: bold;
+                font-size:22px;
+                text-decoration:underline;
+                margin-bottom:15px;
+                text-align: center;
+                text-transform:uppercase;
+            }
+            p{
+                color:red;
+                font-weight: bold;
+                font-size:18px;
+                margin-bottom:15px;
+                text-align: center;
+                margin-bottom:15px;
+            }
+        }
+        .des{
+            margin-top:120px;
+            font-size:12px;
+            color:#978d86;
+            text-align: end;
+        }
+
     }
 }
