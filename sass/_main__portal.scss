@@ -819,6 +819,7 @@ body#pagina__portal {
             @include d(m) {
                 flex-flow: column wrap;
                 margin: 0 auto;
+                gap: 0;
             }
 
             .col-lg-6 {
@@ -844,5 +845,121 @@ body#pagina__portal {
 
 
 
+    }
+
+    #growth {
+        .passo__header {
+            background-color: #1b1b1b;
+            padding: 10px 0;
+            border-bottom: 2px solid $amareloNew;
+            margin-top: 1px;
+            margin-bottom: 30px;
+
+            .align-center {
+                align-items: center;
+
+                @include d(m) {
+                    align-items: initial;
+
+                }
+            }
+
+            h2 {
+                @include tituloSpan(20px, 500);
+                text-align: center;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            img {
+                max-width: 120px;
+
+                @include d(m) {
+                    margin: 0 auto;
+                    max-width: 120px;
+
+                }
+            }
+
+
+
+            .copa-2 {
+                @include d(m) {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+    .cards__copa__wrapper {
+        flex-flow: row nowrap;
+
+    }
+
+    #cards__copa .img__metade {
+        img {
+            width: 80px;
+
+        }
+
+        p {
+            color: $amareloNew;
+            font-weight: 500;
+        }
+    }
+
+    .img__text img {
+        width: 35px;
+    }
+
+    #cards__copa ul.card__copa {
+        height: 545px !important;
+    }
+    .d2c{
+        width:45px;
+    }
+
+    @media (max-width:1210px) {
+        .setas {
+            display: none !important;
+        }
+
+        .cards__copa__wrapper {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+            }
+
+            &::-webkit-scrollbar:vertical {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-button:increment,
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar:horizontal {
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $amareloNew;
+                border-radius: 20px;
+                border: 2px solid #121212;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+
+        }
     }
 }
