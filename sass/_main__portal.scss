@@ -1062,6 +1062,7 @@ body#pagina__portal {
                 display: flex;
                 flex-direction: column;
                 padding-top: 240px;
+                transform: initial !important;
             }
 
             img {
@@ -1117,35 +1118,50 @@ body#pagina__portal {
         }
 
         @media (max-width:1200px) {
+            .metricas__grid {
+                transform: scale(.7);
+            }
+
             .img-5 {
                 max-width: 180px;
             }
         }
-        .impo{
-            max-width:300px;
-            h5{
-                color:red;
+
+        .impo {
+            max-width: 300px;
+
+            h5 {
+                color: red;
                 font-weight: bold;
-                font-size:22px;
-                text-decoration:underline;
-                margin-bottom:15px;
+                font-size: 22px;
+                text-decoration: underline;
+                margin-bottom: 15px;
                 text-align: center;
-                text-transform:uppercase;
+                text-transform: uppercase;
             }
-            p{
-                color:red;
+
+            p {
+                color: red;
                 font-weight: bold;
-                font-size:18px;
-                margin-bottom:15px;
+                font-size: 18px;
+                margin-bottom: 15px;
                 text-align: center;
-                margin-bottom:15px;
+                margin-bottom: 15px;
+            }
+
+            @include d(m) {
+                margin: 0 auto;
             }
         }
-        .des{
-            margin-top:120px;
-            font-size:12px;
-            color:#978d86;
+
+        .des {
+            margin-top: 120px;
+            font-size: 12px;
+            color: #978d86;
             text-align: end;
+            @include d(m) {
+                margin-top:40px;
+            }
         }
 
     }
