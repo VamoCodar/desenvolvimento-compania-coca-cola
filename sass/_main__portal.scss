@@ -1159,10 +1159,321 @@ body#pagina__portal {
             font-size: 12px;
             color: #978d86;
             text-align: end;
+
             @include d(m) {
-                margin-top:40px;
+                margin-top: 40px;
             }
         }
 
+    }
+
+    #premios__portal {
+        background-color: $preto-bg;
+        @include bg-props-contain;
+        background-image: url(../img/page-portal/trofeu-haha.png);
+        background-position: right;
+        color: white;
+        padding-bottom: 40px;
+
+        .passo__header {
+            background-color: #1b1b1b;
+            padding: 10px 0;
+            border-bottom: 2px solid $amareloNew;
+            margin-top: 1px;
+
+            .align-center {
+                align-items: center;
+
+                @include d(m) {
+                    align-items: initial;
+
+                }
+            }
+
+            h2 {
+                @include tituloSpan(20px, 500);
+                text-align: center;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            img {
+                max-width: 120px;
+
+                @include d(m) {
+                    margin: 0 auto;
+                    max-width: 120px;
+
+                }
+            }
+
+
+
+            .copa-2 {
+                @include d(m) {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .reco {
+            li {
+                margin-bottom: 10px;
+
+                @include d(s) {
+                    margin-top: 10px;
+                }
+            }
+
+            h1 {
+                font-size: 22px;
+                font-weight: 500;
+                text-align: center;
+                max-width: 900px;
+                margin: 20px auto;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .col-lg-6 {
+                @include d(m) {
+                    padding: 0;
+                }
+            }
+
+            .destaque__linha {
+                padding: 10px;
+                border: 2px solid #d9d9d9;
+                border-radius: 20px;
+
+                @include d(m) {
+                    flex-direction: column;
+                }
+
+                .col-2 {
+                    @include d(m) {
+                        flex: 0 0 80px;
+                        max-width: 80px;
+                    }
+                }
+
+                .col-10 {
+                    @include d(s) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+
+                        h4 {
+                            margin-top: 0;
+
+                        }
+                    }
+
+                }
+
+
+
+                .d__flex {
+                    align-items: center;
+
+                    @include d(m) {
+                        justify-content: center;
+                        text-align: center;
+                    }
+
+
+                }
+
+                h4 {
+                    color: $amareloNew;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 120%;
+                }
+            }
+        }
+         .container{
+            @include d(s){
+                padding:0 10px;
+            }
+        }
+
+
+    }
+
+    #network__portal {
+        background-color: $preto-bg;
+        @include bg-props-contain;
+        background-image: url(../img/page-portal/trofeu-haha.png);
+        background-position: right;
+        color: white;
+        padding-bottom: 40px;
+        .container{
+            @include d(s){
+                padding:0 10px;
+            }
+        }
+
+        .passo__header {
+            background-color: #1b1b1b;
+            padding: 10px 0;
+            border-top: 2px solid $amareloNew;
+            margin-top: 1px;
+
+            .align-center {
+                align-items: center;
+
+                @include d(m) {
+                    align-items: initial;
+
+                }
+            }
+
+            h2 {
+                @include tituloSpan(20px, 500);
+                text-align: center;
+
+                @include d(s) {
+                    font-size: 18px;
+                }
+            }
+
+            img {
+                max-width: 120px;
+
+                @include d(m) {
+                    margin: 0 auto;
+                    max-width: 120px;
+
+                }
+            }
+
+
+
+            .copa-2 {
+                @include d(m) {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: bold;
+
+            @include d(s) {
+                font-size: 18px;
+            }
+        }
+
+        .network__portal-linha {
+            border: 2px solid #d9d9d9;
+            padding: 20px 10px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #5a5a5a;
+            border-radius: 20px;
+
+        }
+
+        h2 {
+            color: $amareloNew;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            @include d(s) {
+                font-size: 16px;
+            }
+        }
+
+        .col-md-10 {
+            padding: 0;
+        }
+
+        .network__portal-wrapper {
+            .col-lg-6 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .d__flex {
+                align-items: center;
+
+                @include d(m) {
+                    flex-direction: column;
+                }
+
+                img[alt="trofeu-garafa"] {
+                    max-width: 65px;
+                    margin: 0 auto;
+                }
+
+            }
+
+
+
+            img[alt="brain"] {
+                max-width: 400px;
+                margin: 10px auto;
+
+                @include d(m) {
+                    max-width: 200px;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                color: $branco-cinza;
+                display: inline-block;
+                margin-top: auto;
+            }
+
+        }
+
+        .p__orna {
+            &:before {
+                content: "";
+                display: inline-block;
+                @include bg-props-contain;
+                width:12px;
+                height:12px;
+                margin-right:5px;
+                background-image: url(../img/page-portal/trem-1.png);
+
+            }
+            &-2{
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    @include bg-props-contain;
+                    width:12px;
+                    height:12px;
+                    margin-right:5px;
+                background-image: url(../img/page-portal/trem-2.png);
+
+                }
+            }
+        }
     }
 }
