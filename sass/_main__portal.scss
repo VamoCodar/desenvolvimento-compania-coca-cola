@@ -758,10 +758,13 @@ body#pagina__portal {
         }
 
         img {
-            max-width: 300px;
+            max-width: 250px;
+            margin: 10px 0;
 
             @include d(s) {
                 max-width: 150px;
+                margin: 10px auto;
+
 
             }
         }
@@ -1738,7 +1741,7 @@ body#pagina__portal {
 
     }
 
-    #estrutura {
+    #estrutura-2 {
         padding: 40px 0;
         background-color: #151515;
         color: white;
@@ -1785,8 +1788,9 @@ body#pagina__portal {
             font-weight: 500;
             text-align: center;
             margin: 10px 0;
-            @include d(s){
-                margin-top:25px;
+
+            @include d(s) {
+                margin-top: 25px;
             }
         }
 
@@ -1898,8 +1902,9 @@ body#pagina__portal {
                 text-align: center;
                 font-size: 20px;
                 margin-top: 50px;
-                @include d(s){
-                    margin-top:20px;
+
+                @include d(s) {
+                    margin-top: 20px;
                 }
             }
 
